@@ -3,6 +3,7 @@
 https://night.eng.tamagawa.ac.jp/
 
 
+
 ※作業前にすること※
 
 ・Github Desktopから
@@ -16,6 +17,7 @@ Fetch origin→(変更あればPull origin→)作業
 ・Github DesktopからCommit to main(タイトルと説明記入)→Push origin→ブラウザのGithubから変更確認
 
 ・グループにやったタスクの報告
+
 
 
 ☆確認事項☆
