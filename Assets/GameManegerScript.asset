@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: GameManegerScript
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptGraphAsset
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-124.2717,"y":50.19644},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-399.0,"y":-174.0},"guid":"bbb8793f-21fb-4faf-98d3-fc9fe0ca395b","$version":"A","$type":"Unity.VisualScripting.Start","$id":"9"},{"coroutine":false,"defaultValues":{},"position":{"x":-493.0,"y":84.0},"guid":"469c8f29-946e-4114-95f4-8d216186dd59","$version":"A","$type":"Unity.VisualScripting.Update"},{"kind":"Application","defaultValues":{"name":{"$content":"currentTime","$type":"System.String"}},"position":{"x":-183.0,"y":-196.0},"guid":"f1d35c32-eb01-4b8f-87bd-5d3251ed2da3","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"13"},{"type":"System.Int32","value":{"$content":0,"$type":"System.Int32"},"defaultValues":{},"position":{"x":-369.0,"y":-41.0},"guid":"4fa236c2-38de-47e5-8e04-60ed42c1703d","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"15"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"13"},"destinationKey":"assign","guid":"4812fbb1-d7f6-44b1-9141-497bd7fde920","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"output","destinationUnit":{"$ref":"13"},"destinationKey":"input","guid":"60febc0a-1229-47dc-aa6b-96e144f4165e","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
