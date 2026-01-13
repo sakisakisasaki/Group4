@@ -8,6 +8,7 @@ TagManager:
   - goal
   - Enemy
   - Enemy01
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - ground
-  - 
+  - Ground
   - 
   - 
   - 
