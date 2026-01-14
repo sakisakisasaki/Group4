@@ -25,13 +25,20 @@ public class Player : MonoBehaviour
         // 衝突した相手のタグが Enemy かどうかを確認
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // ★ 上から踏んだか判定
             foreach (ContactPoint2D contact in collision.contacts)
-            {
-                // プレイヤーが上 → 敵が下
+            { 
+                //上から踏んだか判定
                 if (contact.normal.y > 0.5f)
                 {
-                    // 踏んだので死亡しない
+                    Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+                    // 踏めない敵なら死亡
+                    if (enemy != null && !enemy.canBeStomped)
+                    {
+                        break; // 下へ（死亡処理）
+                    }
+
+                    // 踏める敵なら生存
                     return;
                 }
             }

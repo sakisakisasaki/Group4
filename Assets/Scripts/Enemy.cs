@@ -6,10 +6,10 @@ public class Enemy : MonoBehaviour
     public float moveDistance = 3f;
 
     // 踏めるかどうかのフラグ
-    public bool canBeStomped = true;
+    public bool canBeStomped = false;
 
     // 動くかどうかのフラグ
-    public bool canMove = true;
+    public bool canMove = false;
 
     //  自動ジャンプするかどうかのフラグ
     public bool canAutoJump = false;
@@ -88,26 +88,25 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // プレイヤー以外は無視
         if (!collision.gameObject.CompareTag("Player")) return;
 
-        // 踏める敵だけ踏み判定
         if (canBeStomped)
         {
-            foreach (ContactPoint2D contact in collision.contacts)
+            Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
+
+            // プレイヤーが下向きに落下しているか
+            if (playerRb.linearVelocity.y < 0)
             {
-                // 上から踏んだ判定
-                if (contact.normal.y < 0)
+                foreach (ContactPoint2D contact in collision.contacts)
                 {
-                    Debug.Log("敵を上から踏んだ！");
-                    Die();
-                    return;
+                    if (contact.normal.y < 0)
+                    {
+                        Die();
+                        return;
+                    }
                 }
             }
         }
-
-        // 踏めない or 上からでない場合
-        Debug.Log("プレイヤーがダメージを受ける");
     }
 
     void Die()
@@ -115,6 +114,7 @@ public class Enemy : MonoBehaviour
         // 敵が死んだら動きを止める
         canMove = false;
 
+       
         // オブジェクトを削除
         Destroy(gameObject);
     }

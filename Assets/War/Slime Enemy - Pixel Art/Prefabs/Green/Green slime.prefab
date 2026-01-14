@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   speed: 2
   moveDistance: 3
-  canBeStomped: 1
+  canBeStomped: 0
   canMove: 0
   canAutoJump: 0
   jumpPower: 6

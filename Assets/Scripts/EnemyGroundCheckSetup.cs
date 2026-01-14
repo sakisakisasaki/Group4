@@ -37,7 +37,5 @@ public class EnemyGroundCheckSetup : MonoBehaviour
         {
             enemyScript.groundCheck = gc.transform;
         }
-
-        Debug.Log("GroundCheck ‚ðŽ©“®”z’u‚µ‚Ü‚µ‚½: " + gc.transform.position);
     }
 }
