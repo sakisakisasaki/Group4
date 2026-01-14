@@ -114,7 +114,9 @@ public class Enemy : MonoBehaviour
         // 敵が死んだら動きを止める
         canMove = false;
 
-       
+        // スコア加算
+        ScoreManager.instance.AddEnemyScore();
+
         // オブジェクトを削除
         Destroy(gameObject);
     }
